@@ -2,8 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
+
+        stage('Checkout') {
             steps {
+                echo 'Cloning repository...'
                 git 'https://github.com/HusainS07/jenkins_test'
             }
         }
@@ -22,7 +24,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploy step placeholder'
+                echo 'Deploying application...'
             }
         }
     }
